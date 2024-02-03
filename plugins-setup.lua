@@ -27,12 +27,25 @@ end
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
--- nightfly
--- use("bluz71/vim-nightfly-guicolors") -- first color scheme
+-- lua plenary, lua functions that many plugins use
+use ("nvim-lua/plenary.nvim")
+
+-- nvim tree, file explorer
+use("nvim-tree/nvim-tree.lua")
+
+-- statusline
+use("nvim-lualine/lualine.nvim")
+
+-- telescope, a fuzzy finder
+use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency
+use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+
+--[[
+-- gruvbox
+use { "ellisonleao/gruvbox.nvim" }
+]]
 
 -- nordic
-
-
 use 'AlexvZyl/nordic.nvim'
 
 -- Put this at the end after all plugins!
