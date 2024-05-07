@@ -7,6 +7,7 @@ local keymap = vim.keymap -- for conciseness
 
 -- normal mode remaps
 keymap.set("n", "k", "i") -- enters insert mode from normal mode
+keymap.set("n", "K", "I") -- insert at beginning of line
 
 -- normal mode motion
 
